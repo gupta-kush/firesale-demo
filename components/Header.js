@@ -7,14 +7,30 @@ import {
     UsersIcon,
     Bars3Icon,
  } from '@heroicons/react/20/solid'
+import { useState } from "react"
+import { useRouter } from "next/dist/client/router"
 
 function Header() {
+
+  const [searchInput, setSearchInput] = useState('')
+
+  const router = useRouter()
+
+  const search = () => {
+    router.push({
+        pathname: '/search',
+        query: {
+            search: searchInput,
+        }
+    })
+  }
+
   return (
     <header className='sticky top-0 z-50 grid 
     grid-cols-3 bg-white shadow-md p-5  md:px-10'>
 
         {/* Left */}
-        <div className='relative flex items-center h-10
+        <div onClick= {() => router.push("/")} className='relative flex items-center h-10
         cursor-pointer my-auto space-x-10'>
             <Image 
                 src='https://img.freepik.com/premium-vector/fire-logo-template_23987-60.jpg?w=2000'
@@ -22,19 +38,22 @@ function Header() {
                 objectFit="contain"
                 objectPosition="left"
             />
-            <p>FIRESALE</p>
+            <p className="text-red-500 font-semibold">FIRESALE</p>
         </div>
 
         {/* Middle */}
         <div className='flex items-center md:border-2 rounded-full
         py-2 md:shadow-sm'>
-            <input 
+            <input
+                value = {searchInput}
+                onChange = {(e) => setSearchInput(e.target.value)} // e = event
                 className='flex-grow pl-5 bg-transparent outline-none
                 text-sm text-gray-600 placeholder-gray-400' 
                 type="Text" 
                 placeholder='Start your search'
                 />
-            <MagnifyingGlassIcon className='hidden md:inline-flex h-8 bg-red-400
+
+            <MagnifyingGlassIcon onClick={search} className='hidden md:inline-flex h-8 bg-red-400
             text-white rounded-full p-2 cursor-pointer md:mx-2'/>
         </div>
 

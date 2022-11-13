@@ -12,7 +12,7 @@ function Banner() {
         />
         <div className="absolute top-1/2 w-full text-center">
             <p className="font-semibold text-white text-md sm:text-lg">Want to contribute?</p>
-            <button className="text-green-500 bg-white px-10 py-4 
+            <button className="text-red-500 bg-white px-10 py-4 
             shadow-md rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-100">
                 Upload a FIRE sale
                 </button>
