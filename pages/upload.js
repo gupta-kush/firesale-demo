@@ -35,6 +35,7 @@ function Upload() {
     }
 
   return (
+
     <div className="flex flex-col items-center justify-center  space-y-4 py-24">
 
     <p className="text-3xl text-center font-light text-gray-600">
