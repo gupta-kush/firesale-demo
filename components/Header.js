@@ -20,7 +20,7 @@ function Header() {
     router.push({
         pathname: '/search',
         query: {
-            search: searchInput,
+            testvar: searchInput,
         }
     })
   }
@@ -50,7 +50,7 @@ function Header() {
                 className='flex-grow pl-5 bg-transparent outline-none
                 text-sm text-gray-600 placeholder-gray-400' 
                 type="Text" 
-                placeholder='Start your search'
+                placeholder='Enter your address'
                 />
 
             <MagnifyingGlassIcon onClick={search} className='hidden md:inline-flex h-8 bg-red-400

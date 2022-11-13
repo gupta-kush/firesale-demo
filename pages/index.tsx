@@ -7,6 +7,7 @@ import Header from "../components/Header"
 import Banner from "../components/Banner"
 import SmallCard from "../components/SmallCard"
 import InfoCard from "../components/InfoCard"
+import { useRouter } from "next/dist/client/router"
 
 //const Home: NextPage = () => {
 export default function Home({ exploreData }: any) {
@@ -46,7 +47,7 @@ export default function Home({ exploreData }: any) {
 }
 
 //export default Home
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const exploreData = await fetch('https://api.npoint.io/bfb5dbb0b764bdd7fcee').
   then(
     (res) => res.json()

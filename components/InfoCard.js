@@ -1,10 +1,28 @@
 //import React from 'react'
 import Image from "next/image"
 import { HeartIcon } from "@heroicons/react/24/outline"
+import searchInput from "../components/Header"
+import { useState } from "react"
+import { useRouter } from "next/dist/client/router"
+
+
+
 
 function InfoCard({img, title, description, distance}) {
+
+    const router = useRouter()
+    const { searchInput } = router.query
+    const search = () => {
+        router.push({
+            pathname: '/search',
+            query: {
+                testvar: searchInput,
+            }
+        })
+    }
+
   return (
-    <div className="flex py-7 px-2 pr-2 border-b border-t cursor-pointer
+    <div onClick={search} className="flex py-7 px-2 pr-2 border-b border-t cursor-pointer
     hover:opacity-80 hover:shadow-lg transition duration-200 ease-out">
         <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
             <Image src={img} layout="fill" objectFit="cover" className="rounded-2xl"/>
