@@ -8,7 +8,7 @@ import Banner from "../components/Banner"
 import SmallCard from "../components/SmallCard"
 
 //const Home: NextPage = () => {
-export default function Home({ exploreData }) {
+export default function Home({ exploreData }: any) {
   return (
     <div className="">
       <Head>
@@ -26,7 +26,7 @@ export default function Home({ exploreData }) {
           <h2 className='text-3xl font-semibold pb-5'>Explore Nearby Deals</h2>
           {/* Pull data from a server - API Endpoint, STATIC RENDERING */}
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
-            {exploreData?.map(({img, distance, location}) => (
+            {exploreData?.map(({img, distance, location}: any) => (
             // <h1>{item.location}</h1>
             <SmallCard 
             key={img}
@@ -38,7 +38,7 @@ export default function Home({ exploreData }) {
           </div>
         </section>
       </main>
-      
+
     </div>
   )
 }
