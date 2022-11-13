@@ -10,6 +10,7 @@ module.exports = {
       "i.insider.com",
       "image.cnbcfm.com",
       "wallpaperaccess.com",
+      "www.google.com",
   ]
   }
 }

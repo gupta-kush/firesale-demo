@@ -27,12 +27,12 @@ function Search({searchResults}) {
                         <InfoCard
                             key={img} 
                             img={img}
-                            location={location}
+                            //location={location}
                             title={title}
                             description={description}
-                            star={star}
-                            price={price}
-                            total={total}
+                            //star={star}
+                            //price={price}
+                            //total={total}
                         />    
                     ))}
                 </div>
@@ -47,7 +47,7 @@ export default Search
 
 
 export async function getServerSideProps() {
-    const searchResults = await fetch('https://www.jsonkeeper.com/b/5NPS').then((res) => res.json())
+    const searchResults = await fetch('https://api.npoint.io/bfb5dbb0b764bdd7fcee').then((res) => res.json())
   
     return {
       props: {
