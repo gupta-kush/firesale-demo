@@ -2,10 +2,10 @@
 import Image from "next/image"
 import { 
     MagnifyingGlassIcon,
-    GlobeAltIcon,
+    //GlobeAltIcon,
     UserCircleIcon,
     UsersIcon,
-    Bars3Icon,
+    //Bars3Icon,
  } from '@heroicons/react/20/solid'
 import { useState } from "react"
 import { useRouter } from "next/dist/client/router"
@@ -61,11 +61,11 @@ function Header() {
         <div className="flex items-center space-x-4
         justify-end text-gray-500">
             <p className="hidden md:inline cursor-pointer">Create an account</p>
-            <GlobeAltIcon className="h-6 cursor-pointer"/>
+            {/* <GlobeAltIcon className="h-6 cursor-pointer"/> */}
 
             <div className="flex items-center space-x-2
             border-2 p-2 rounded-full">
-                <Bars3Icon className="h-6 cursor-pointer"/>
+                {/* <Bars3Icon className="h-6 cursor-pointer"/> */}
                 <UserCircleIcon className="h-6 cursor-pointer"/>
             </div>
         </div>
@@ -74,3 +74,4 @@ function Header() {
 }
 
 export default Header
+
