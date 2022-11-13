@@ -8,19 +8,19 @@ import { useRouter } from "next/dist/client/router"
 
 
 
-function InfoCard({img, title, description, distance}) {
+function InfoCard({img, title, description, distance, latitude, longitude}) {
 
     const router = useRouter()
-    const { searchInput } = router.query
+    // const { exploreData } = router.query
     const search = () => {
         router.push({
-            pathname: '/search',
+            pathname: '/map',
             query: {
-                testvar: searchInput,
+                longitude: longitude,
+                latitude: latitude,
             }
         })
     }
-
   return (
     <div onClick={search} className="flex py-7 px-2 pr-2 border-b border-t cursor-pointer
     hover:opacity-80 hover:shadow-lg transition duration-200 ease-out">

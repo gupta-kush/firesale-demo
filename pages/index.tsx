@@ -28,14 +28,16 @@ export default function Home({ exploreData }: any) {
           <h2 className='text-3xl font-semibold pb-5'>Trending Deals Near You</h2>
           {/* Pull data from a server - API Endpoint, STATIC RENDERING */}
           <div className='flex flex-col grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
-            {exploreData?.map(({img, title, description, distance}: any) => (
+            {exploreData?.map(({img, title, description, distance, latitude, longitude}: any) => (
             // <h1>{item.location}</h1>
             <InfoCard 
-            key={img}
+            key={title}
               img={img} 
               title={title}
               description={description}
               distance={distance}
+              latitude={latitude}
+              longitude={longitude}
             />
           ))}
           </div>

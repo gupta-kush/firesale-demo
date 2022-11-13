@@ -11,6 +11,7 @@ module.exports = {
       "image.cnbcfm.com",
       "wallpaperaccess.com",
       "www.google.com",
+      "lh5.googleusercontent.com",
   ]
   }
 }

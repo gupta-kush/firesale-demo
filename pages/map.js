@@ -62,7 +62,7 @@ function Map() {
                     mapTypeControl: false,
                     fullscreenControl: false,
                 }}
-                onLoad={map => setMap(map)}
+                //onLoad={map => setMap(map)}
                 onLoad={calculateRoute}
             >
                 {/*<Marker position={originRef} />*/}
